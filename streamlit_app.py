@@ -98,3 +98,8 @@ if streamlit.button("Add a Fruit to Load List"):
 # streamlit.text("The fruit load list contains:")
 # streamlit.text(my_data_row)
 # streamlit.dataframe(my_data_row)
+if streamlit.button('Get Fruit List'):
+  my_data_rows = get_fruit_load_list()
+  my_cnx.close()
+  streamlikt.dataframe(my_data_rows)
+  
