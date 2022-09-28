@@ -67,7 +67,7 @@ def get_fruit_load_list():
     return my_cur.fetchall()
   
  # add a button
-if streamlit.button('Get Fruit Load List"):
+if streamlit.button("Get Fruit Load List"):
 
 # streamlit.stop()
 # import snowflake.connector
