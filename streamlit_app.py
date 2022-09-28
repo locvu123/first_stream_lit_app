@@ -35,12 +35,12 @@ streamlit.header("Fruityvice Fruit Advice!")
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 # streamlit.text(fruityvice_response.json())
 
-try:
+ try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
-if not fruit_choice :
+ if not fruit_choice :
   streamlit.error("Please select a FRUIT to get information.")
-else:
-  streamlit.write('The user entered ', fruit_choice)
+ else:
+ # streamlit.write('The user entered ', fruit_choice)
 
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
