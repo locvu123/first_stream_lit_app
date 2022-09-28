@@ -61,6 +61,8 @@ try:
 except URLError as e:
  streamlit.error()
 
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
@@ -72,7 +74,7 @@ if streamlit.button("Get Fruit Load List"):
 # streamlit.stop()
 # import snowflake.connector
 
-  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+# my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx.cursor()
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 # add_my_fruit = my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values('papaya from streamit') ")
