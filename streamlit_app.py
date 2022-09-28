@@ -101,5 +101,5 @@ if streamlit.button("Add a Fruit to Load List"):
 if streamlit.button('Get Fruit List'):
   my_data_rows = get_fruit_load_list()
   my_cnx.close()
-  streamlikt.dataframe(my_data_rows)
+  streamlit.dataframe(my_data_rows)
   
